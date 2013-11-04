@@ -41,7 +41,7 @@ npm uninstall -g grunt
 JSON文件使我们能跟踪和安装我们所有开发所依赖的信息。然后，对项目工作的人会拥有当前开发依赖性，最终有助于保持同步的开发环境。
 在项目的根目录下创建package.json文件。package.json用于配置你需要拉取的grunt插件信息:
 
-```html
+```javascript
 {
 	"name":"grunt", // 项目名称
 	"version":"0.1.0", // 项目版本
@@ -70,7 +70,7 @@ Gruntfile.js本质上是一个函数，而且他的参数是grunt。它是用于
 
 在工程根目录下放个Gruntfile.js，文件内容如下：
 
-```html
+```javascript
 module.exports = function(grunt) {
  
     // 构建任务配置
@@ -103,8 +103,10 @@ module.exports = function(grunt) {
 在根目录下执行`grunt`命令：
 “Done,without error”，说明已经构建成功，且没有错误，你可以看到grunt是非常迅速的！
 来看下目录，你就会看到build下出现了hello-grunt-min.js，文件内容如下：
-```html
+
+```javascript
 /*! demo 2013-07-13 */
 !function(a){var b="<p>hello grunt!</p>";a("body").append(b)}(jQuery);
 ```
+
 已经使用uglify压缩成功！
