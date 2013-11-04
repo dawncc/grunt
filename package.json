@@ -1,0 +1,9 @@
+{
+	"name":"grunt",
+	"version":"0.1.0",
+	"author":"cc",
+	"devDependencies":{
+		"grunt-kmc":"*",
+		"grunt-contrib-uglify": "~0.2.0"
+	}
+}
