@@ -10,10 +10,12 @@ Grunt
 ## Grunt能干些什么？
 
 按任务目标大致可分为四类：
-+文件操作型：比如合并、压缩js和css文件等（包括）
-+预编译型：比如编译less、sass、coffeescript等
-+类库项目构建型：比如 angular、ember、backbone等（这种推荐使用yeoman）
-+工程质量保障型：比如jshint、jasmine、mocha等
+
+*  文件操作型：比如合并、压缩js和css文件等（包括）
+*  预编译型：比如编译less、sass、coffeescript等
+*  类库项目构建型：比如 angular、ember、backbone等（这种推荐使用yeoman）
+*  工程质量保障型：比如jshint、jasmine、mocha等
+
 除此之外还有像 watch （监听文件改变，自动触发构建）等功能。
 
 ## 安装Grunt
