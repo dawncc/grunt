@@ -35,7 +35,7 @@ npm uninstall -g grunt
 为了确保Grunt已经正确安装，你可以运行下面的命令：
 
 ```html
- grunt --version
+grunt --version
 ```
 
 ## 创建package.json文件
@@ -74,7 +74,7 @@ Gruntfile.js本质上是一个函数，而且他的参数是grunt。它是用于
 
 ```javascript
 module.exports = function(grunt) {
- 
+   
     // 构建任务配置
     grunt.initConfig({
         //读取package.json的内容，形成个json数据
@@ -85,18 +85,23 @@ module.exports = function(grunt) {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
             },
             //具体任务配置
-            build: {
+           <!--  build: {
                 //源文件
                 src: 'src/index.js',
                 //目标文件
                 dest: 'build/index-min.js'
-            }
+            } -->
+            build: {
+                files: {
+                    'build/index-min.js': ['src/index.js']
+                }
+            },
         }
     });
- 
+    
     // 加载指定插件任务
     grunt.loadNpmTasks('grunt-contrib-uglify');
- 
+    
     // 默认执行的任务  不定义默认任务会出现 >Task "default" not found. Use --force to continue. 
     grunt.registerTask('default', ['uglify']);
 };
@@ -112,3 +117,4 @@ module.exports = function(grunt) {
 ```
 
 已经使用uglify压缩成功！
+
